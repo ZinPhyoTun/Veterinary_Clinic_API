@@ -9,4 +9,5 @@
 <h3>Step 5: Run "php artisan migrate", "php artisan passport:install" and "php artisan db:seed"</h3>
 <h3>Step 6: Run the project with "php artisan serve"</h3>
 <h3>And then, you can register or login to get token</h3>
-<h3>And then, with this token, you can test API CRUD</h3>
+<h3>And then, with this token, you can test CRUD API</h3>
+<h3>Download Postman json file to test CRUD API</h3>
