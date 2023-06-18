@@ -10,3 +10,11 @@
 <p>Step 6: Run the project with "php artisan serve".</p>
 <p>And then, you can register or login to get token.</p>
 <p>And then, with this token, you can test CRUD API.</p>
+
+<p>Routes</p>
+<p>POST => /api/register</p>
+<p>POST => /api/login</p>
+<p>GET => /api/patients</p>
+<p>POST => /api/patients</p>
+<p>PUT => /api/patients/{id}</p>
+<p>DEL => /api/patients/{id}</p>
