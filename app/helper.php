@@ -4,13 +4,14 @@ namespace App;
 
 class Helper {
     
-    public static function success_api_response($result, $message, $data = [])
+    /**
+     * api_response
+     *
+     * @param  $status, $message, $data = Optional
+     * @return mixed json_data
+     */
+    public static function api_response($status, $message, $data = [])
     {
-        return response()->json(['result' => $result, 'message' => $message, 'data' => $data]);
-    }
-
-    public static function fail_api_response($result, $message)
-    {
-        return response()->json(['result' => $result, 'message' => $message]);
+        return response()->json(['status' => $status, 'message' => $message, 'data' => $data]);
     }
 }

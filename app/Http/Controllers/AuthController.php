@@ -28,7 +28,7 @@ class AuthController extends Controller
         $data['name'] = $user->name;
         $data['token'] = $user->createToken('vc')->accessToken;
 
-        return Helper::success_api_response(1, 'Registered Successfully', $data);
+        return Helper::api_response(200, 'Registered Successfully', $data);
     }
 
     /**
@@ -45,9 +45,9 @@ class AuthController extends Controller
             $data['name'] =  $user->name;
             $data['token'] =  $user->createToken('vc')->accessToken;
 
-            return Helper::success_api_response(1, 'Logined Successfully', $data);
+            return Helper::api_response(200, 'Logined Successfully', $data);
         } else {
-            return Helper::fail_api_response(0, 'Unauthenticated Error');
+            return Helper::api_response(401, 'Unauthenticated Error');
         } 
     }
 }

@@ -19,7 +19,7 @@ class PatientController extends Controller
     {
         $data = PatientResource::collection(Patient::all());
 
-        return Helper::success_api_response(1, 'Retrieved Successfully', $data);
+        return Helper::api_response(200, 'Retrieved Successfully', $data);
     }
 
     /**
@@ -37,9 +37,9 @@ class PatientController extends Controller
                     );
         
         if($patient) {
-            return Helper::success_api_response(1, 'Created Successfully', new PatientResource($patient));
+            return Helper::api_response(200, 'Created Successfully', new PatientResource($patient));
         } else {
-            return Helper::fail_api_response(0, 'Failed to create');
+            return Helper::api_response(400, 'Failed to create');
         }
     }
 
@@ -61,9 +61,9 @@ class PatientController extends Controller
         );
 
         if($patient) {
-            return Helper::success_api_response(1, 'Updated Successfully', new PatientResource($patient));
+            return Helper::api_response(200, 'Updated Successfully', new PatientResource($patient));
         } else {
-            return Helper::fail_api_response(0, 'Failed to update');
+            return Helper::api_response(400, 'Failed to update');
         }
     }
 
@@ -80,9 +80,9 @@ class PatientController extends Controller
         $patient->delete();
 
         if($patient) {
-            return Helper::success_api_response(1, 'Deleted Successfully');
+            return Helper::api_response(200, 'Deleted Successfully');
         } else {
-            return Helper::fail_api_response(0, 'Failed to delete');
+            return Helper::api_response(400, 'Failed to delete');
         }
     }
 }
