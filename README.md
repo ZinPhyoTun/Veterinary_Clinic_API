@@ -12,9 +12,9 @@
 <p>And then, with this token, you can test CRUD API.</p>
 
 <p>Routes</p>
-<p>POST => /api/register</p>
-<p>POST => /api/login</p>
-<p>GET => /api/patients</p>
-<p>POST => /api/patients</p>
-<p>PUT => /api/patients/{id}</p>
-<p>DEL => /api/patients/{id}</p>
+<p>POST => /api/register => To register</p>
+<p>POST => /api/login => To login</p>
+<p>GET => /api/patients => To get all patients</p>
+<p>POST => /api/patients => To create a patient</p>
+<p>PUT => /api/patients/{id} => To update a patient</p>
+<p>DEL => /api/patients/{id} => To delete a patient</p>
